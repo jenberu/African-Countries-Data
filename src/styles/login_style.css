@@ -1,0 +1,37 @@
+.login{
+    margin:30px auto;
+    height: 400px;
+    width: 50%;
+    background-color: rgb(95, 158, 160);
+   
+}
+.login form{
+    display: flex;
+    flex-direction: column;
+    margin: 5px auto;
+    width: 50%;
+    justify-content: center;
+    
+}
+.login form input{
+ height: 30px;
+ margin: 5px;
+ border-color: rgba(0, 0, 0,0.1);
+ border-radius: 5px;
+}
+.login form input:focus, .login form input:hover {
+    background-color: rgb(230, 218, 218);
+    border: none;
+    outline: none;
+}
+
+
+.login form button{
+    height: 30px;
+    margin: 5px;
+    background-color: rgb(98, 35, 156);
+    border-radius: 10px;
+    border-color: rgba(0, 0, 0,0.1);
+    color:wheat;
+    cursor: pointer;
+   }
