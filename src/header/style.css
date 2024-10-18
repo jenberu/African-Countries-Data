@@ -1,0 +1,46 @@
+
+.nav-bar-wrapper{
+    display: flex;
+    position: relative;
+    box-shadow: 0 10px 2px -2px rgba(0, 0, 0,0.2); /* Adds shadow below */
+
+}
+
+.nav-bar{
+    list-style: none;
+    display: flex;
+    margin: 20px;
+    position: absolute;
+    right: 20px;
+}
+.nav-bar .nav-bar-item{
+    margin: 10px;
+
+}
+ .links{
+    text-decoration: none;
+    color: #443f3f;
+  
+
+}
+.links.active{
+    font-weight: bold;
+    color: red;
+    box-shadow: 0 5px 2px -2px rgba(43, 8, 240, 0.904); /* Adds shadow below */
+}
+.links::after{
+    content:" ";
+    display: block;
+    height:3px;
+    width:0;
+    transition: all 0.5s ease;
+   
+}
+.links:hover::after{
+    width:100%;
+    background: red;
+}
+.nav-bar-home{
+    margin: 30px;
+    float: left;
+}
