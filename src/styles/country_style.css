@@ -24,7 +24,7 @@
 .most-puplated-country-wrapper .most-puplated-country{
 list-style: none;
 }
-.most-puplated-country-list{
+.most-puplated-country-list,.most-spoken-language-list{
     margin-bottom: 20px;
 }
 .most-puplated-country-list span{

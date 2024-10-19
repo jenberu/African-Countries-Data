@@ -22,7 +22,21 @@ const Country = ({ country, index }) => {
 };
 const MostSpokenLanguage = (props) => {
   return (
-    <></>
+    <>
+      {props.mostSpokenLanguages.map((language, index) => (
+        <div className='most-spoken-language-list' key={index}>
+          <span><strong>{language[0]}</strong></span>&nbsp;&nbsp;
+          <Line className='progress-line'
+                        percent={language[1]}
+                        strokewidth="2"
+                        strokeColor="lightgreen"
+                        trailwidth="2"
+                        strokeLinecap="square"
+          />
+          &nbsp;&nbsp;
+          <span>{language[1]}</span>
+        </div>
+      ))}    </>
   );
     
 };
@@ -36,9 +50,8 @@ const top10 = topPopulatedCountries.slice(0, 10);
   return (
     <div className='most-puplated-country-wrapper'>
      
-      <h2>10 Most populated countries in the Africa </h2>
       <div className='most-puplated-country'>
-        <p>Africa &nbsp;&nbsp; <Line className='progress-line'
+        <p><strong>Africa </strong> &nbsp;&nbsp; <Line className='progress-line'
                         percent={100}
                         strokewidth="2"
                         strokeColor="lightgreen"
@@ -48,7 +61,7 @@ const top10 = topPopulatedCountries.slice(0, 10);
         </p>
       {top10.map((country, index) => (
         <div className='most-puplated-country-list' key={index}>
-          <span>{country.name}</span>&nbsp;&nbsp;
+          <span><strong>{country.name}</strong></span>&nbsp;&nbsp;
           <Line className='progress-line'
                         percent={(country.population/totalPopulation)*100}
                         strokewidth="2"

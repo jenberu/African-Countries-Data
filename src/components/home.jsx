@@ -93,8 +93,11 @@ const Home = (props) => {
                 <div id='status'>
                 <div className='buttons'>
                     <button name='population' onClick={()=>setIsPopulationDisplayed(true)}>Population</button> 
-                    <button name='language' onClick={()=>setIsPopulationDisplayed(false)}>Languages</button>
-               </div>
+                        <button name='language' onClick={() => setIsPopulationDisplayed(false)}>Languages</button>
+                        
+                    </div>
+                    <h2>10 Most { isPopulationDisplayed ?'populated countries':'spoken Languages' } in the Africa </h2>
+
                     {isPopulationDisplayed ? (<MostPopulatedCountries countries={countries} />
                     ) :
                         (<MostSpokenLanguage mostSpokenLanguages={mostSpokenLanguages} />
