@@ -40,3 +40,11 @@
 .most-puplated-country-wrapper .most-puplated-country{
 list-style: none;
 }
+.most-puplated-country-list{
+    margin-bottom: 20px;
+}
+.most-puplated-country-list span{
+}
+ .progress-line{
+    width: 50%;
+}
