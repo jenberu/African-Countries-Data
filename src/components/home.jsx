@@ -36,6 +36,8 @@ const Home = (props) => {
     return (
         <div className="home-page-wrapper">
             <h1>African Countries Data</h1>
+            <p></p>
+            <p><input type='text' name='search' placeholder='Search countries by name' /></p>
             
             {/* Display loading message if data is being fetched */}
             {loading ? <p>Loading...</p> : <div>

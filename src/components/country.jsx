@@ -7,7 +7,7 @@ const Country = ({ country, index }) => {
       <img
         src={country.flagurl}
         alt=""
-        style={{ width: 200, hieght: "auto" }}
+        style={{ width: 250, hieght: "auto" }}
       />
 
       <h2>{country.name}</h2>

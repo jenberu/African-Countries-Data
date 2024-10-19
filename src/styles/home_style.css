@@ -7,9 +7,22 @@
     background-color: rgba(128, 128, 128,0.1);
     width:80%;
 }   
+.home-page-wrapper h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: #ff008c;
+}
+.home-page-wrapper p input{
+    height: 50px;
+    width: 300px;
+    border-radius: 20%;
+    outline: none;
+    border: none;
+    text-align: center;
+}
 .country-continier-wrapper{
     display: flex;
     flex-wrap: wrap;  /* Ensures countries wrap to the next line if they exceed the width */
-    gap: 20px;  /* Adds some space between the countries */
     justify-content: center; /* Centers the countries horizontally */
+    gap: 20px;
 }
