@@ -20,4 +20,33 @@ const Country = ({ country, index }) => {
     </div>
   );
 };
-export default Country;
+const MostSpokenLanguage = (props) => {
+  return (
+    <></>
+  );
+    
+};
+const MostPopulatedCountries = (props) => {
+  const topPopulatedCountries = props.countries.sort((a, b) => b.population - a.population);
+
+// Get the top 10 most populated countries
+const top10 = topPopulatedCountries.slice(0, 10);
+  return (
+    <div className='most-puplated-country-wrapper'>
+      <div className='buttons'>
+                    <button>Population</button> 
+                    <button>Languages</button>
+                </div>
+    <ul className='most-puplated-country'>
+      {top10.map((countery, index) => (
+        <li key={index}>
+         {countery.name}
+        </li>
+      ))}
+      </ul>
+    </div>
+  );
+    
+};
+
+export  { Country ,MostPopulatedCountries ,MostSpokenLanguage};

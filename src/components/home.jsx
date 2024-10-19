@@ -1,7 +1,7 @@
 import '../styles/home_style.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import Country from './country';
+import { Country ,MostPopulatedCountries} from './country';
 
 const Home = (props) => {
     // Use useState to store and update data
@@ -24,8 +24,9 @@ const Home = (props) => {
                 currency: Object.values(country.currencies || {}).map(curr => curr.name).join(', '),
                 flagurl:country.flags.svg
             }));
-            setCountries(countryData);
-            setFilteredCountries(countryData);
+            const sortedCountryData = countryData.sort((a, b) => a.name.localeCompare(b.name));
+            setCountries(sortedCountryData);
+            setFilteredCountries(sortedCountryData);
             setLoading(false); // Turn off loading
         } catch (error) {
             console.error("Error fetching country data", error);
@@ -43,9 +44,11 @@ const Home = (props) => {
         const filterd = countries.filter(country =>
             country.name.toLowerCase().includes(value.toLowerCase())
         );
+        
         setFilteredCountries(filterd);
 
     };
+   
     return (
         <div className="home-page-wrapper">
             <h1>African Countries Data</h1>
@@ -58,7 +61,7 @@ const Home = (props) => {
             /></p>
             
             {/* Display loading message if data is being fetched */}
-            {loading ? <p>Loading...</p> : <div>
+            {loading ? <p>Loading...</p> : <div className='main-wrapper'>
 
                 <div className='country-continier-wrapper'>
 
@@ -69,7 +72,9 @@ const Home = (props) => {
             
         ))}
       </div>
-                    
+        
+              <MostPopulatedCountries countries={countries}/>
+
             </div>}
 
         </div>
