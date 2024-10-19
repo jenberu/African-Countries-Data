@@ -20,23 +20,7 @@
     z-index: 10;
 
 }
-.most-puplated-country-wrapper .buttons{
-    gap:20px;
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   margin: 50px;
-}
-.most-puplated-country-wrapper .buttons button{
-  height: 40px;
-  width: 150px;
-  border:none;
-  border-radius: 5px;
-  background-color: yellow;
-  cursor: pointer;
-  font-size: 24px;
 
-}
 .most-puplated-country-wrapper .most-puplated-country{
 list-style: none;
 }
@@ -47,4 +31,5 @@ list-style: none;
 }
  .progress-line{
     width: 50%;
+    height: 20px;
 }

@@ -35,10 +35,8 @@ const MostPopulatedCountries = (props) => {
 const top10 = topPopulatedCountries.slice(0, 10);
   return (
     <div className='most-puplated-country-wrapper'>
-      <div className='buttons'>
-                    <button>Population</button> 
-                    <button>Languages</button>
-                </div>
+     
+      <h2>10 Most populated countries in the Africa </h2>
       <div className='most-puplated-country'>
         <p>Africa &nbsp;&nbsp; <Line className='progress-line'
                         percent={100}

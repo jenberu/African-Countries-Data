@@ -5,6 +5,7 @@ import Home from './components/home';
 import Footer from './footer/footer';
 import Login from './components/login';
 import Signup from './components/register';
+import { MostPopulatedCountries } from './components/country';
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home className="home-component" />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Signup/>}/>
+        <Route path="/register" element={<Signup />} />
+
 
       </Routes>
       <Footer/>

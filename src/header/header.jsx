@@ -32,7 +32,7 @@ const Header = () => {
             options.map((option, index) => {
                 return(
                 <li key={index} className="nav-bar-item">
-                    <NavLink to={option.to}   className={({ isActive }) => isActive ? 'links active' : 'links'}                    >{ option.label}</NavLink>  
+                    <NavLink to={option.to}   className={({ isActive }) => isActive ? 'links active' : 'links'} >{ option.label}</NavLink>  
                     </li>
                 );
             })

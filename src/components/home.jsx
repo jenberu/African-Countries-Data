@@ -1,7 +1,9 @@
 import '../styles/home_style.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
-import { Country ,MostPopulatedCountries} from './country';
+import { Country, MostPopulatedCountries,MostSpokenLanguage } from './country';
+import '@fortawesome/fontawesome-free/css/all.css';
+
 
 const Home = (props) => {
     // Use useState to store and update data
@@ -9,6 +11,8 @@ const Home = (props) => {
     const [filteredCountries, setFilteredCountries] = useState([]);
     const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
+    const [mostSpokenLanguages, setMostSpokenLanguages] = useState([])
+    const [isPopulationDisplayed, setIsPopulationDisplayed] = useState(true)
    
 
     const getCountries = async () => {
@@ -28,6 +32,17 @@ const Home = (props) => {
             setCountries(sortedCountryData);
             setFilteredCountries(sortedCountryData);
             setLoading(false); // Turn off loading
+            const languageCount = response.data.reduce((acc, country) => {
+                const languages = Object.values(country.languages || {});
+                //count each language
+                languages.forEach((language) => {
+                    acc[language] = (acc[language] || 0) + 1;
+                });
+                return acc;
+            }, {});
+            const sortedLanguges = Object.entries(languageCount).sort((a, b) => b[1] - a[1]);
+            setMostSpokenLanguages(sortedLanguges.slice(0,10))
+            
         } catch (error) {
             console.error("Error fetching country data", error);
             setLoading(false);
@@ -48,6 +63,8 @@ const Home = (props) => {
         setFilteredCountries(filterd);
 
     };
+
+   
    
     return (
         <div className="home-page-wrapper">
@@ -59,7 +76,8 @@ const Home = (props) => {
                 placeholder='Search countries by name'
                 onChange={handleChange}
             /></p>
-            
+         <a href="#status"><i className="fas fa-chart-bar icon-large"></i></a>
+
             {/* Display loading message if data is being fetched */}
             {loading ? <p>Loading...</p> : <div className='main-wrapper'>
 
@@ -72,10 +90,19 @@ const Home = (props) => {
             
         ))}
       </div>
-        
-              <MostPopulatedCountries countries={countries}/>
-
-            </div>}
+                <div id='status'>
+                <div className='buttons'>
+                    <button name='population' onClick={()=>setIsPopulationDisplayed(true)}>Population</button> 
+                    <button name='language' onClick={()=>setIsPopulationDisplayed(false)}>Languages</button>
+               </div>
+                    {isPopulationDisplayed ? (<MostPopulatedCountries countries={countries} />
+                    ) :
+                        (<MostSpokenLanguage mostSpokenLanguages={mostSpokenLanguages} />
+                        )
+                    }
+             </div>
+            </div>
+            }
 
         </div>
     );
