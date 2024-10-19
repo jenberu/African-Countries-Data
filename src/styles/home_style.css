@@ -1,10 +1,15 @@
 .home-page-wrapper{
-    background-color: rgb(0, 0, 255,0.3);
     justify-content: center;
-    width: 800px;
     align-items: center;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    background-color: rgba(128, 128, 128,0.1);
+    width:80%;
+}   
+.country-continier-wrapper{
+    display: flex;
+    flex-wrap: wrap;  /* Ensures countries wrap to the next line if they exceed the width */
+    gap: 20px;  /* Adds some space between the countries */
+    justify-content: center; /* Centers the countries horizontally */
 }

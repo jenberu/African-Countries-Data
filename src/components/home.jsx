@@ -1,6 +1,7 @@
 import '../styles/home_style.css';
 import axios from 'axios';
 import { useEffect, useState } from 'react';
+import Country from './country';
 
 const Home = (props) => {
     // Use useState to store and update data
@@ -40,19 +41,15 @@ const Home = (props) => {
             {loading ? <p>Loading...</p> : <div>
                 <h2>Currently, We have {countries.length} countries </h2>
 
-                <ul>
-        {countries.map((country, index) => (
-            <li key={index}>
-                <img src={country.flagurl} alt="" style={{ width:200, hieght:'auto'}}/>
+                <div className='country-continier-wrapper'>
 
-            <h2>{country.name}</h2>
-            <p>Capital: {country.capital}</p>
-            <p>Population: {country.population}</p>
-            <p>Languages: {country.language}</p>
-            <p>Currency: {country.currency}</p>
-          </li>
+                    {countries.map((country, index) => (
+
+                            <Country country={country} index={index} />
+                            
+            
         ))}
-      </ul>
+      </div>
                     
             </div>}
 
