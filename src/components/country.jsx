@@ -11,10 +11,12 @@ const Country = ({ country, index }) => {
       />
 
       <h2>{country.name}</h2>
-      <p>Capital: {country.capital}</p>
-      <p>Population: {country.population}</p>
-      <p>Languages: {country.language}</p>
-      <p>Currency: {country.currency}</p>
+      <div className='country-info'>
+      <p><strong>Capital: </strong>{country.capital}</p>
+      <p><strong>Population:</strong> {country.population}</p>
+      <p><strong>Languages:</strong> {country.language}</p>
+      <p><strong>Currency:</strong> {country.currency}</p>
+    </div>
     </div>
   );
 };

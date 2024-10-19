@@ -2,10 +2,13 @@
 
 .country-continier{
     width: 30%;
-    border: 1px solid #ccc;
     padding: 10px;
     text-align: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
 
 
+}
+.country-continier .country-info{
+   
+    text-align: left;
 }
