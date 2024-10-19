@@ -20,6 +20,10 @@
     border: none;
     text-align: center;
 }
+.home-page-wrapper .number-search{
+    font-size: 24px;
+    color: #ff008c;
+}
 .country-continier-wrapper{
     display: flex;
     flex-wrap: wrap;  /* Ensures countries wrap to the next line if they exceed the width */

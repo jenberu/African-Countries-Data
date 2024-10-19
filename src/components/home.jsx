@@ -6,7 +6,10 @@ import Country from './country';
 const Home = (props) => {
     // Use useState to store and update data
     const [countries, setCountries] = useState([]);
+    const [filteredCountries, setFilteredCountries] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
     const [loading, setLoading] = useState(true);
+   
 
     const getCountries = async () => {
        const url = "https://restcountries.com/v3.1/region/africa";
@@ -21,7 +24,8 @@ const Home = (props) => {
                 currency: Object.values(country.currencies || {}).map(curr => curr.name).join(', '),
                 flagurl:country.flags.svg
             }));
-            setCountries(countryData);  // Update the data state
+            setCountries(countryData);
+            setFilteredCountries(countryData);
             setLoading(false); // Turn off loading
         } catch (error) {
             console.error("Error fetching country data", error);
@@ -32,12 +36,24 @@ const Home = (props) => {
     useEffect(() => {
         getCountries();  // Fetch the data once when the component mounts
     }, []);
+    const handleChange = (e) => {
+        const { value } = e.target;
+        setSearchTerm(value);//update the seaarch term state
+        // Filter countries based on the search term
+        const filterd = countries.filter(country =>
+            country.name.toLowerCase().includes(value.toLowerCase())
+        );
+        setFilteredCountries(filterd);
 
+    };
     return (
         <div className="home-page-wrapper">
             <h1>African Countries Data</h1>
-            <p></p>
-            <p><input type='text' name='search' placeholder='Search countries by name' /></p>
+            {searchTerm && <p className='number-search'>{ filteredCountries.length}  satisfied the search criteria</p>}
+            <p><input type='text' name='search'
+                placeholder='Search countries by name'
+                onChange={handleChange}
+            /></p>
             
             {/* Display loading message if data is being fetched */}
             {loading ? <p>Loading...</p> : <div>
@@ -45,7 +61,7 @@ const Home = (props) => {
 
                 <div className='country-continier-wrapper'>
 
-                    {countries.map((country, index) => (
+                    {filteredCountries.map((country, index) => (
 
                             <Country country={country} index={index} />
                             
