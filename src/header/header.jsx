@@ -25,7 +25,7 @@ const Header = () => {
     return (
         <div className="nav-bar-wrapper">
             <div className="nav-bar-home">
-            <NavLink to='/'   className={({ isActive }) => isActive ? 'links active' : 'links'} >Home</NavLink>  
+            <NavLink to='/African-Countries-Data'   className={({ isActive }) => isActive ? 'links active' : 'links'} >Home</NavLink>  
             </div>
         
         <ul className="nav-bar">{
