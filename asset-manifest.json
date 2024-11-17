@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/African-Countries-Data/static/css/main.50286952.css",
-    "main.js": "/African-Countries-Data/static/js/main.01b2f70e.js",
+    "main.js": "/African-Countries-Data/static/js/main.efba4334.js",
     "static/media/fa-solid-900.ttf": "/African-Countries-Data/static/media/fa-solid-900.07ed6d5fa32c1d54af0f.ttf",
     "static/media/fa-brands-400.ttf": "/African-Countries-Data/static/media/fa-brands-400.0ff70dcbf135d859ebf3.ttf",
     "static/media/fa-solid-900.woff2": "/African-Countries-Data/static/media/fa-solid-900.93f719f4d62bfa3e748c.woff2",
@@ -12,10 +12,10 @@
     "static/media/fa-v4compatibility.woff2": "/African-Countries-Data/static/media/fa-v4compatibility.6cfec8414be20e2c3426.woff2",
     "index.html": "/African-Countries-Data/index.html",
     "main.50286952.css.map": "/African-Countries-Data/static/css/main.50286952.css.map",
-    "main.01b2f70e.js.map": "/African-Countries-Data/static/js/main.01b2f70e.js.map"
+    "main.efba4334.js.map": "/African-Countries-Data/static/js/main.efba4334.js.map"
   },
   "entrypoints": [
     "static/css/main.50286952.css",
-    "static/js/main.01b2f70e.js"
+    "static/js/main.efba4334.js"
   ]
 }
