@@ -1,0 +1,38 @@
+.about-me {
+    background: linear-gradient(to right, #81c784 , #e7f3e8); 
+    color: #0a0404; 
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 800px;
+    font-family: 'Arial', sans-serif; 
+}
+  
+  .about-me h3 {
+    font-size: 2rem; 
+    margin-bottom: 15px;
+    text-align: center; 
+  }
+  
+  .about-me p {
+    font-size: 1.1rem; 
+    line-height: 1.6; 
+    margin-bottom: 15px; 
+    text-align: justify; 
+  }
+  
+  .about-me p sup {
+    font-size: 0.8rem; 
+  }
+  
+  @media (max-width: 768px) {
+    .about-me {
+      padding: 15px;
+      font-size: 1rem; 
+    }
+  
+    .about-me h3 {
+      font-size: 1.5rem; 
+    }
+  }
+  

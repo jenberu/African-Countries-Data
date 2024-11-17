@@ -5,7 +5,7 @@ import Home from './components/home';
 import Footer from './footer/footer';
 import Login from './components/login';
 import Signup from './components/register';
-import { MostPopulatedCountries } from './components/country';
+import AboutMe from './components/about';
 
 function App() {
   return (
@@ -15,6 +15,8 @@ function App() {
         <Route path="/" element={<Home className="home-component" />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Signup />} />
+        <Route path="/about" element={<AboutMe />} />
+
 
 
       </Routes>
