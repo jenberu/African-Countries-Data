@@ -79,7 +79,8 @@ const Home = (props) => {
          <a href="#status"><i className="fas fa-chart-bar icon-large"></i></a>
 
             {/* Display loading message if data is being fetched */}
-            {loading ? <p>Loading...</p> : <div className='main-wrapper'>
+            {
+                loading ? <p>Loading...</p> : <div className='main-wrapper'>
 
                 <div className='country-continier-wrapper'>
 

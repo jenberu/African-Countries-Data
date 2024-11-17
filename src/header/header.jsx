@@ -2,10 +2,10 @@
 import { NavLink } from "react-router-dom";
 import './style.css'
 const options = [
-    {
-        to: '/course',
-        label:'Course',
-    },
+    // {
+    //     to: '/course',
+    //     label:'Course',
+    // },
     {
         to: '/about',
         label:'About',
