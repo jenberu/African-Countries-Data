@@ -10,14 +10,14 @@ const options = [
         to: '/about',
         label:'About',
     },
-    {
-        to: '/login',
-        label:'Login',
-    },
-    {
-        to: '/register',
-        label:'Register',
-    },
+    // {
+    //     to: '/login',
+    //     label:'Login',
+    // },
+    // {
+    //     to: '/register',
+    //     label:'Register',
+    // },
     
 ]
 

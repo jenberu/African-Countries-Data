@@ -28,10 +28,23 @@
     margin-bottom: 20px;
 }
 .country-continier-wrapper{
-    display: flex;
-    flex-wrap: wrap;  /* Ensures countries wrap to the next line if they exceed the width */
+
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     justify-content: center; /* Centers the countries horizontally */
     gap: 20px;
+}
+.show-button{
+    background-color: #ff008c;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    font-size: 24px;
+    border: none;
+
+
 }
  .buttons{
     gap:20px;

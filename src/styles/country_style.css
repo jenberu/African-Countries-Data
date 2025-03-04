@@ -2,7 +2,6 @@
 
 .country-continier{
     background-color: white;
-    width: 30%;
     padding: 5px;
     text-align: center;
     box-shadow: 0 10px 5px rgba(0, 0, 0, 0.1);
@@ -11,8 +10,21 @@
 
 
 }
-.country-continier .country-info{
+.country-continier .country-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+
+
+}
+.country-continier .country-info p{
     text-align: left;
+    margin: 0;
+    font-size: 16px;
+    width: 70%;
+
 }
 .country-continier:hover{
     transform:scale(1.1);
